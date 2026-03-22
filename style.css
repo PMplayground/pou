@@ -5,8 +5,22 @@ Retrieved 2026-03-22, License - CC BY-SA 4.0
 */
 
 @font-face {
-    font-family: F16;
+    font-family: Bold-Riley;
     src: url("fonts/Bold-Riley.otf") format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Bookmania-Black;
+    src: url("fonts/Bookmania-Black.otf") format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Bookmania-Black-Italic;
+    src: url("fonts/Bookmania-Black-Italic.otf") format('truetype');
     font-weight: bold;
     font-style: normal;
 }
