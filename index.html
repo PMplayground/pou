@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AR file centre</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            padding: 30px;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        h1 {
+            color: #285f2f;
+            margin-bottom: 10px;
+        }
+        
+        .description {
+            color: #285f2f;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        
+        .download-section {
+            margin: 25px 0;
+        }
+        
+        h2 {
+            color: #285f2f;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        h2 i {
+            font-size: 1.2em;
+        }
+        
+        .file-list {
+            list-style-type: none;
+        }
+        
+        .file-item {
+            background-color: #f5f7fa;
+            border: 1px solid #285f2f;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+        
+        .file-item:hover {
+            background-color: #edf7ff;
+            border-color: #c6e2ff;
+            transform: translateY(-2px);
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+        }
+        
+        .file-info {
+            flex: 1;
+        }
+        
+        .file-name {
+            font-weight: 600;
+            font-size: 18px;
+            color: #2c3e50;
+        }
+        
+        .file-size {
+            font-size: 14px;
+            color: #7f8c8d;
+            margin-top: 5px;
+        }
+        
+        .download-btn {
+            background-color: #285f2f;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .download-btn:hover {
+            background-color: #2980b9;
+            transform: scale(1.05);
+        }
+        
+        .download-btn:active {
+            transform: scale(0.98);
+        }
+        
+        .instructions {
+            background-color: #f9f9f9;
+            border-left: 4px solid #285f2f;
+            padding: 15px;
+            border-radius: 0 6px 6px 0;
+            margin-top: 30px;
+            font-size: 15px;
+        }
+        
+        .instructions h3 {
+            color: #285f2f;
+            margin-bottom: 10px;
+        }
+        
+        .instructions ul {
+            padding-left: 20px;
+        }
+        
+        .instructions li {
+            margin-bottom: 8px;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #285f2f;
+            font-size: 14px;
+        }
+        
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+            
+            .file-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .download-btn {
+                margin-top: 15px;
+                align-self: flex-end;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-download"></i>AR File Download Center</h1>
+            <p class="description">AR projects</p>
+        </header>
+        
+        <section class="download-section">
+            <h2><i class="fas fa-file"></i> Available Files</h2>
+            
+            <ul class="file-list">
+                <li class="file-item">
+                    <div class="file-info">
+                        <div class="file-name">itiPounamu</div>
+                        <div class="file-size">File size: .4 MB</div>
+                    </div>
+                    <a href="itiPounamu.usdz" download class="download-btn">
+                        <i class="fas fa-download"></i> Download
+                    </a>
+                </li>
+                
+            </ul>
+        </section>
+        
+        <div class="instructions">
+            <h3>How to download files:</h3>
+            <ul>
+                <li>Click the <strong>"Download"</strong> button next to any file you want</li>
+                <li>Your browser will start downloading the file automatically</li>
+                <li>Check your browser's download folder or the location you specified for saved files</li>
+                <li>If the download doesn't start automatically, right-click the button and select "Save link as..."</li>
+                <li>If you have an ios (iphone or ipad) device the file will open as an AR object </li>
+            </ul>
+        </div>
+        
+        <footer>
+            <p>© 2026 Taiao Hihiko and Lane25 Limited. All rights reserved.</p>
+            <p>This page contains links to downloadable files.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Add animation to download buttons when clicked
+        document.querySelectorAll('.download-btn').forEach(button => {
+            button.addEventListener('click', function(e) {
+                // Create a visual feedback effect
+                const originalText = this.innerHTML;
+                this.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Downloading...';
+                this.style.backgroundColor = '#2ecc71';
+                
+                // Reset button after 1.5 seconds
+                setTimeout(() => {
+                    this.innerHTML = originalText;
+                    this.style.backgroundColor = '';
+                }, 1500);
+                
+                // You could add file download tracking here
+                const fileName = this.parentElement.querySelector('.file-name').textContent;
+                console.log(`Download started: ${fileName}`);
+            });
+        });
+        
+        // Add a simple page load animation
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelector('.container').style.opacity = '0';
+            document.querySelector('.container').style.transform = 'translateY(20px)';
+            
+            setTimeout(() => {
+                document.querySelector('.container').style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                document.querySelector('.container').style.opacity = '1';
+                document.querySelector('.container').style.transform = 'translateY(0)';
+            }, 100);
+        });
+    </script>
+</body>
+</html>
+
+
+
