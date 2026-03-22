@@ -1,0 +1,12 @@
+/*
+Source - https://stackoverflow.com/a/71285751
+Posted by ez_hedge
+Retrieved 2026-03-22, License - CC BY-SA 4.0
+*/
+
+@font-face {
+    font-family: F16;
+    src: url("fonts/Bold-Riley.otf") format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
